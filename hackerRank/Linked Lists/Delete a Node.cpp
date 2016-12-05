@@ -1,29 +1,26 @@
 /*
-Delete Node at a given position in a linked list
-Node is defined as
-struct Node
-{
-int data;
-struct Node *next;
-}
+  Print elements of a linked list in reverse order as standard output
+  head pointer could be NULL as well for empty list
+  Node is defined as
+  struct Node
+  {
+     int data;
+     struct Node *next;
+  }
 */
-Node* Delete(Node *head, int position)
+void ReversePrint(Node *head)
 {
-	// Complete this method
-	Node* cur;
-	Node* pre_cur;
-	Node* temp = (Node*)malloc(sizeof(Node));
-	cur = head;
-	if (position == 0) {
-		head = head->next;
-		return head;
-	}
-	for (int i = 0; i < position; ++i) {
-		pre_cur = cur;
-		cur = cur->next;
-	}
-	pre_cur->next = cur->next;
-
-	return head;
-
+  // This is a "method-only" submission.
+  // You only need to complete this method.
+  int arr[1000];
+  int i=0;
+  Node* cur;
+  cur = head;
+  while(cur != NULL){
+      arr[i++] = cur->data;
+      cur = cur->next;
+  }
+  for(int j = --i ; j >=0 ; --j){
+      cout << arr[j] << endl;
+  }
 }
