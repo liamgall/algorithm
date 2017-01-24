@@ -17,7 +17,6 @@ int checkStr(char* str) {
 	return 0;
 }
 
-
 int main(void) {
 	char str[10001];
 	int testCase;
